@@ -6,4 +6,5 @@ employee_list = [
     "Moana",
     "Juilet"
 ]
-print(employee_list[1]+ ", " + employee_list[-2])
+
+print(employee_list[1] + ", " + employee_list[-2])

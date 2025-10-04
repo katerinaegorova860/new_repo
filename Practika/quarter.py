@@ -10,4 +10,5 @@ def quarter_of_year(month):
     else:
         return "Некорректный номер месяца"
 
+
 print(quarter_of_year(5))
