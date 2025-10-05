@@ -4,3 +4,4 @@ class Mailing:
         self.from_address = from_address
         self.cost = cost
         self.track = track
+        # строка
