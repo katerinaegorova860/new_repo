@@ -7,4 +7,5 @@ def check_divisibility(n):
         else:
             print(i)
 
+
 check_divisibility(10)
