@@ -5,11 +5,19 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class MainPage:
+    """
+    Главная страница магазина.
+    """
     def __init__(self, driver):
+        """
+        Инициализация главной страницы.
+        :param driver: WebDriver
+        """
         self.driver = driver
 
     @allure.step("Добавить товар в корзину: {product_name}")
     def add_product_to_cart(self, product_name: str) -> None:
+        """Добавляет товар в корзину."""
         product_id = product_name.lower().replace(" ", "-")
         button_id = f"add-to-cart-{product_id}"
         WebDriverWait(self.driver, 10).until(
@@ -18,6 +26,7 @@ class MainPage:
 
     @allure.step("Перейти в корзину")
     def go_to_cart(self) -> None:
+        """Переходит в корзину."""
         WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.ID, "shopping_cart_container"))
         ).click()
