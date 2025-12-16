@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def min_boxes(items):
     return ceil(items / 5)
 
